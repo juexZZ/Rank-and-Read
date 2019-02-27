@@ -1,0 +1,9 @@
+exp_folder: ../exp
+loss_record: multitask_knrm_half_loss
+checkpoint: multitask_knrm_half_epoch1_checkpoint
+data: /preprocessed/train_data.json
+only_prepro: false
+force_restart: true
+word_rep: /data/disk4/private/zhangjuexiao/zlsh80826Marco/glove.840B.300d.txt
+cuda: true
+use_covariance: false

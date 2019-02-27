@@ -1,0 +1,15 @@
+exp_folder: ../exp
+data: /preprocessed/predict_pipeline_data.json
+dest: ../exp/prediction/bidaf-tfidf1.json
+pipeline: true
+score_data: /data/disk4/private/zhangjuexiao/MSMARCOdev_tfidf_scores
+topk: 1
+chkpt_folder: ../exp
+checkpoint: bidaf_checkpoint
+store_rank: false
+rank_file: ../exp/prediction/e2e_rankingscore.json
+update_vocab: false
+only_prepro: false
+word_rep: /data/disk4/private/zhangjuexiao/zlsh80826Marco/glove.840B.300d.txt
+cuda: true
+use_covariance: false
