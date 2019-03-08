@@ -17,8 +17,8 @@ This is the repository of the codes of Rank-and-Read(bert reader) for MSMARCO QA
 |BERT  |CKNRM |40.07 |36.27  |0.61  |0.57|
 
 ### Environment Requirement
-- Python3
-- PyTorch 1.0.0
+- Python 3.6
+- PyTorch 1.0
 
 ### Data Download & Preparation
 To get MSMARCO QA dataset, see [MSMARCO QA](http://www.msmarco.org/dataset.aspx)
@@ -34,13 +34,13 @@ To get MSMARCO QA dataset, see [MSMARCO QA](http://www.msmarco.org/dataset.aspx)
 
 ### training & prediction
 ```shell
-./models/run_*.sh
+./models/run\_*.sh
 ```
 
 ### Evaluation
 To evaluate the prediction file of bert, you need to transfer it to MSMARCO standard form. you can run evaluate/\*.py files for that, you need modify the prediction and output file path in evaluate/\*.py first.
 ```shell
-python evaluate/\*.py
+python evaluate/*.py
 ```
 
 ### Contact
