@@ -34,7 +34,7 @@ To get MSMARCO QA dataset, see [MSMARCO QA](http://www.msmarco.org/dataset.aspx)
 
 ### training & prediction
 ```shell
-./models/run\_*.sh
+./models/run_*.sh
 ```
 
 ### Evaluation
