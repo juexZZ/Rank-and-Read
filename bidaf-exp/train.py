@@ -182,8 +182,10 @@ def main(choose_model):
     """
     args = yaml.load(open('args.yaml'))
     print(args)
-    
-    config_filepath = os.path.join('config.yaml')
+    if choose_model=='rar':
+        config_filepath = os.path.join('config_rar.yaml')
+    else:
+        config_filepath = os.path.join('config.yaml')
     with open(config_filepath) as f:
         config = yaml.load(f)
 

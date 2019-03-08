@@ -1,6 +1,7 @@
 '''data preprocess '''
 import argparse
 import json
+import os
 from Mydataset import load_data, tokenize_data, gen_vocab, EpochGen
 
 
@@ -23,7 +24,7 @@ def prepare_data(args, mode='preprocessed'):
     	return
     if args.renew_vocab:
     	print('Generating vocabs...')
-    	token_to_id, char_to_id = gen_vocab(data, token_to_id, char_to_id, min_count=3)
+    	token_to_id, char_to_id = gen_vocab(data, token_to_id, char_to_id, min_count=args.min_count)
     	id_to_token = {id_: tok for tok, id_ in token_to_id.items()}# reverse the dict
     	id_to_char = {id_: char for char, id_ in char_to_id.items()}
     	print('len of vocab: ', len(id_to_token))
@@ -47,6 +48,9 @@ if __name__=='__main__':
     argparser.add_argument("--test",
     						default=False,
     						help="Whether use it for test or train")
+    argparser.add_argument("--min_count",
+                            default=3,
+                            help="Whether use it for test or train")
     argparser.add_argument("--concat",
     						default=False,
     						help="Whether concatenate the passages for a query")
@@ -59,6 +63,8 @@ if __name__=='__main__':
     argparser.add_argument("--out_file",
     						help="Output data file name.")
     args = argparser.parse_args()
+    if not os.path.exist(args.exp_folder):
+        os.mkdir(args.exp_folder)
 	print('data preprocessing...')
 	print(args)
 	prepare_data(args, args.mode)

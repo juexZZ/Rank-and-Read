@@ -199,12 +199,6 @@ def main():
 
     checkpoint = try_to_resume(args['chkpt_folder'], args['checkpoint'])
 
-    if args['only_prepro']:
-        print('Only preprocess predict data...')
-        prepare_data(args)
-        print('Preprocess predict data completed.')
-        return
-
     if checkpoint:
         model, id_to_token, id_to_char, data = reload_state(
             checkpoint, config, args)
