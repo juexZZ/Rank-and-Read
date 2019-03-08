@@ -1,4 +1,4 @@
-# BiDAF-based Experiments
+# BiDAF Reader Experiments
 My codes, experiment results and model checkpoints of our work *Bridging Neural Rankers and Machine Readers*
 
 ## models/checkpoints
