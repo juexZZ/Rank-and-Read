@@ -1,6 +1,3 @@
-sys.path.append('/data/disk4/private/zhangkaitao/')
-from models.MyRanker import cknrm, knrm
-
 class BertForMultiTask(PreTrainedBertModel):
     def __init__(self, config):
         super(BertForMultiTask, self).__init__(config)
