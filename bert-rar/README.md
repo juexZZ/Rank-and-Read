@@ -24,7 +24,7 @@ This is the repository of the codes of Rank-and-Read(bert reader) for MSMARCO QA
 To get MSMARCO QA dataset, see [MSMARCO QA](http://www.msmarco.org/dataset.aspx)
 
 ### Model
-- To run our models, you need to install [pytorch pretrained bert](https://github.com/huggingface/pytorch-pretrained-BERT) first. Then add the code in models/modeling.py to the end of (pytorch pretrained bert path)/modeling.py that you just installed.
+- To run our models, you need to install [pytorch pretrained bert](https://github.com/huggingface/pytorch-pretrained-BERT) first. Then add the code in models/modeling.py to the end of (pytorch pretrained bert path)/modeling.py that you just installed, and import the knrm/cknrm model.
 
 - When run the pipeline model, you will need to generate a ranking scores of passages of each query in MSMARCO dev set first, save it to a score file, and modify the dev score file in models/run_pipeline.py
 
